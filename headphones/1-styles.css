@@ -21,6 +21,17 @@
   --menu-width: 150px;
   --menu-max-height-open: 300px;
   --transition-default: all 0.3s ease-in-out;
+  --margin-section: 100px;
+  --margin-section-small: 80px;
+  --text-width: 800px;
+  --font-size-large: 40px;
+  --font-size-medium: 22px;
+  --font-size-small: 15px;
+  --font-size-bold: 50px;
+  --gap-large: 50px;
+  --gap-small: 10px;
+  --image-height-large: 75vh;
+  --overlay-bg-dark: rgba(0, 0, 0, 0.4);
 }
 
 /* OVERALL LAYOUT */
@@ -277,4 +288,163 @@ button:hover {
   pointer-events: none;
   z-index: -2;
   mix-blend-mode: multiply;
+}
+
+/*OFFERED SECTION */
+
+.offered-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: var(--margin-section) 0;
+}
+
+.offered-paragraph {
+  width: var(--text-width);
+  text-align: center;
+  margin-top: 25px;
+}
+
+.offered-items {
+  display: flex;
+  margin: 30px 50px;
+  gap: var(--gap-small);
+  justify-content: space-around;
+}
+
+.item-1,
+.item-2,
+.item-3,
+.item-4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 300px;
+  text-align: center;
+  min-height: 250px;
+}
+
+/* TESTIMONIALS SECTION */
+
+.testimonials-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: var(--margin-section-small) 0;
+  gap: var(--gap-large);
+}
+
+.testimonials-text h2 {
+  font-size: var(--font-size-large);
+  font-weight: 400;
+}
+
+.testimonials-paragraph {
+  width: var(--text-width);
+  text-align: center;
+  margin-top: 25px;
+  font-size: var(--font-size-medium);
+  font-weight: 300;
+}
+
+.testimonials-items {
+  display: flex;
+  margin: auto auto;
+  gap: var(--gap-large);
+  justify-content: center;
+  min-width: auto;
+}
+
+.item--1,
+.item--2,
+.item--3,
+.item--4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 200px;
+  text-align: center;
+  min-height: 150px;
+  color: white;
+  justify-content: center;
+  margin-top: var(--margin-section);
+}
+
+.image-container_1 {
+  position: relative;
+  width: 100%;
+  height: var(--image-height-large);
+  overflow: hidden;
+}
+
+.image-container_1 .cover-image_1 {
+  width: 100%;
+  height: var(--image-height-large);
+  display: block;
+  object-fit: cover;
+}
+
+.overlay-text_1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: var(--color-text-light);
+  background-color: var(--overlay-bg-dark);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  box-sizing: border-box;
+  z-index: 200;
+}
+
+.testimonials-section {
+  max-width: var(--text-width);
+  text-align: center;
+}
+
+.image-container_1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-overlay-blend);
+  opacity: 1;
+  pointer-events: none;
+  z-index: -2;
+  mix-blend-mode: multiply;
+}
+
+/*PENTAGON SHAPE */
+/* (Leave commented out unless needed) */
+
+/* .pent-items {
+  display: flex;
+  margin: 20px auto;
+  gap: 10px;
+  justify-content: space-around;
+  min-width: 1100px;
+  min-height: 20vh;
+} */
+
+.bold {
+  position: relative;
+  top: -50%;
+  left: 0%;
+  font-weight: 500;
+  font-size: var(--font-size-bold);
+}
+
+.texts {
+  position: relative;
+  top: -40%;
+  left: 0%;
+  font-size: var(--font-size-small);
 }
